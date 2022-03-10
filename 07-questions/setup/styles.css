@@ -3,8 +3,7 @@
 Fonts
 ===============
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*
 =============== 
 Variables
@@ -26,7 +25,7 @@ Variables
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-1: hsl(209, 96%, 50%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
@@ -36,20 +35,20 @@ Variables
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
+  --clr-grey-10: hsl(205, 81%, 4%);
+  --clr-white: rgb(0, 0, 0);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-gold: #c59d5f;
-  --clr-black: #222;
+  --clr-gold: #0a49f8;
+  --clr-black: rgb(228, 220, 220);
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --light-shadow: 0 5px 15px rgba(253, 8, 8, 0.5);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
@@ -101,10 +100,10 @@ h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 h4 {
   font-size: 0.875rem;
@@ -118,10 +117,10 @@ p {
     font-size: 4rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   h4 {
     font-size: 1rem;
@@ -187,8 +186,17 @@ Questions
 }
 .title h2 {
   color: var(--clr-gold);
-  font-family: "Great Vibes", cursive;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
+}
+.title h2 .red{
+  color:rgb(247, 33, 33);
+}
+.title h2 .blue{
+  color:rgb(33, 100, 243);
+}
+.title h2 .yellow{
+  color:rgb(240, 218, 24);
 }
 .section-center {
   max-width: var(--fixed-width);
@@ -223,18 +231,19 @@ Questions
 .question-btn:hover {
   transform: rotate(90deg);
 }
-.question-text {
+.answer {
   padding: 1rem 0 1.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #0a49f8;
 }
-.question-text p {
+.answer p {
   margin-bottom: 0;
+  color:rgb(255, 239, 9)
 }
 /* hide text */
-/* .question-text {
+.answer {
   display: none;
 }
-.show-text .question-text {
+.show-text .answer {
   display: block;
 }
 .minus-icon {
@@ -245,4 +254,4 @@ Questions
 }
 .show-text .plus-icon {
   display: none;
-} */
+} 
