@@ -55,19 +55,37 @@ const scrollLinks = document.querySelectorAll('.scroll-link');
 scrollLinks.forEach( (link) => {
     link.addEventListener('click', (e) => {
         //prevent default event
-        e.preventDefault;
+        e.preventDefault();
 
         //navigate to the specific element location on the page
         const id  = e.currentTarget.getAttribute('href').slice(1);
         const element = document.getElementById(id);
-        let position = element.offsetTop;
+
+        //Calculate heights
+        const navHeight = navBar.getBoundingClientRect().height;
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        const fixedNav = navBar.classList.contains('fixed-nav');
+        let position = element.offsetTop - navHeight;
+        // console.log(position);
+        // console.log(navHeight);
+        // console.log(element.offsetTop);
+
+        if(fixedNav === false){
+            position = position  - navHeight;
+        } 
+        if(navHeight > 85){
+            position = position + containerHeight;
+            // console.log(navHeight);
+            // console.log(containerHeight);
+            // console.log(position);
+        }
 
         window.scrollTo(
             {
                 left: 0,
                 top: position
             }
-        )
+        );
         linksContainer.style.height = 0; 
-    })
-})
+    });
+});
